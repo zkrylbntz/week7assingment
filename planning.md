@@ -8,7 +8,7 @@
 
 - **Plan your database schema** --> DrawSQL OR Figma UML diagrams
 
-  - What date do I need to store?
+  - What data do I need to store?
   - Based on the data, how many tables do I need to organise my data efficiently?
 
   - _If you have two or more tables, what's the relationship between them?_
