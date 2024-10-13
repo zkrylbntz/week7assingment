@@ -1,0 +1,28 @@
+#review {
+  height: 200px;
+  width: 300px;
+  resize: none;
+}
+
+#form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* gap: 2em; */
+  font-family: "Courier New", Courier, monospace;
+  font-weight: lighter;
+}
+
+#rating {
+  width: 200px;
+}
+
+::placeholder {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: lighter;
+}
+
+#submit {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: lighter;
+}

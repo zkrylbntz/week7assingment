@@ -47,11 +47,11 @@ app.get("/reviews", async (req, res) => {
 // I need an endpoint to CREATE data in the db --> we are going to use SQL query to  add the data. The data here is stored in the body, so we will add the body data to the db.
 app.post("/add-review", async (req, res) => {
   try {
-    const { users_name, book_name, review, rating } = req.body;
+    const { users_name, book_name, author, review, rating } = req.body;
     const newReview = await db.query(
-      `INSERT INTO reviews (users_name, book_name, review, rating)
-          VALUES ($1, $2, $3, $4);`,
-      [users_name, book_name, review, rating]
+      `INSERT INTO reviews (users_name, book_name, author, review, rating)
+          VALUES ($1, $2, $3, $4, $5);`,
+      [users_name, book_name, author, review, rating]
     );
     res.status(200).json(newReview.rows);
   } catch (error) {

@@ -1,0 +1,17 @@
+#book-stack {
+  margin: 30px;
+  padding: 30px;
+  width: 225px;
+  height: 500px;
+}
+
+#main-container {
+  display: flex;
+  flex-direction: row;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: lighter;
+  line-height: 35px;
+  font-size: 25px;
+  align-items: center;
+  padding: 10px;
+}

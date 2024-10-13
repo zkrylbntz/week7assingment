@@ -1,0 +1,30 @@
+#link1,
+#link2,
+#link3 {
+  text-decoration: none;
+  color: white;
+}
+
+#link-container {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: lighter;
+  background-color: black;
+  height: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#link1:hover {
+  background-color: aquamarine;
+  color: black;
+}
+#link2:hover {
+  background-color: aquamarine;
+  color: black;
+}
+#link3:hover {
+  background-color: aquamarine;
+  color: black;
+}

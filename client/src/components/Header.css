@@ -1,0 +1,23 @@
+#book-symbol {
+  height: 70px;
+  width: 50px;
+  padding-left: 20px;
+}
+
+#header-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  align-items: center;
+  /* background-color: white; */
+}
+
+#symbol-text {
+  font-family: "Courier New", Courier, monospace;
+  /* font-weight: lighter; */
+  font-size: 50px;
+}
+
+#symbol-text:hover {
+  background-color: aquamarine;
+}

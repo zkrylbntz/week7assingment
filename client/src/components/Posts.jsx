@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
+import "./Posts.css";
 
 export default function Posts() {
   const [reviews, setReviews] = useState([]);
+  const [info, setInfo] = useState(false);
 
   useEffect(() => {
     async function fetchReviews() {
@@ -14,16 +16,38 @@ export default function Posts() {
     fetchReviews();
   }, []);
 
+  function handleClick() {
+    setInfo(!info);
+  }
+
   return (
     <>
-      {reviews.map((review) => (
-        <div key={review.id}>
-          <h1>{review.users_name}</h1>
-          <h2>{review.book_name}</h2>
-          <p>{review.review}</p>
-          <p>{review.rating}</p>
-        </div>
-      ))}
+      <div id="posts-container">
+        <h1>Reviews</h1>
+        <p>Pick a book, click to expand, read a review and get inspired!</p>
+        {reviews.map((review) => (
+          <div id="review-container" key={review.id}>
+            <h2 onClick={handleClick}>
+              {review.book_name}
+              <br />
+              <br />
+              {review.author}
+            </h2>
+            {info ? (
+              <>
+                <h1>{review.users_name}</h1>
+                <p>
+                  Review:
+                  <br />
+                  <br />
+                  {review.review}
+                </p>
+                <p>Rating: {review.rating}</p>
+              </>
+            ) : null}
+          </div>
+        ))}
+      </div>
     </>
   );
 }
