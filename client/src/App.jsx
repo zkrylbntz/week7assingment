@@ -1,7 +1,4 @@
-// App should be our parent top-level component
 import "./App.css";
-
-// My advice is that you set up your route in App
 import { Route, Routes } from "react-router-dom";
 import Posts from "./components/Posts";
 import Form from "./components/Form";
@@ -14,8 +11,6 @@ export default function App() {
     <>
       <Header />
       <NavBar />
-      {/* <Posts /> */}
-      {/* <Form /> */}
       <Routes>
         <Route path="/submit-a-review" element={<Form />} />
         <Route path="/reviews" element={<Posts />} />

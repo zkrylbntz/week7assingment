@@ -7,9 +7,10 @@ export default function Posts() {
 
   useEffect(() => {
     async function fetchReviews() {
-      const response = await fetch("http://localhost:8080/reviews");
+      const response = await fetch(
+        "https://week7assingment-server.onrender.com/reviews"
+      );
       const data = await response.json();
-      // const wrangledData = data.reviews;
       console.log(data);
       setReviews(data);
     }

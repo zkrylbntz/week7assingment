@@ -7,7 +7,6 @@ export default function Home() {
   return (
     <>
       <div id="main-container">
-        {/* <img id="book-stack" src={bookStack} /> */}
         <p>
           Welcome to <b>ReviewBook</b>.
           <br /> Here you can find some recommendations for your next book to

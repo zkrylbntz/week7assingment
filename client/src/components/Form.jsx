@@ -2,8 +2,6 @@ import { useState } from "react";
 import "./Form.css";
 
 export default function Form() {
-  // We need state to save the form formValues
-  //! We do not need useEffect in here
   const [formValues, setFormValues] = useState({
     users_name: "",
     book_name: "",
@@ -11,13 +9,10 @@ export default function Form() {
     review: "",
     rating: "",
   });
-  // A submit handler
   function handleSubmit(event) {
     event.preventDefault();
     console.log("The form values are", JSON.stringify(formValues));
-    // Something to prevent the default behaviour of the form
-    // Something to fetch the POST endpoint in the server
-    fetch("http://localhost:8080/add-review", {
+    fetch("https://week7assingment-server.onrender.com/add-review", {
       method: "POST",
       body: JSON.stringify(formValues),
       headers: {
@@ -27,7 +22,6 @@ export default function Form() {
     console.log(JSON.stringify({ formValues }));
   }
 
-  // We also need to handle change
   function handleInputChange(event) {
     setFormValues({
       ...formValues,
@@ -106,20 +100,11 @@ export default function Form() {
           />
           <br />
           <br />
-          {/* <p>Name: {formValues.usesrs_name}</p>
-        <p>Email: {formValues.book_name}</p> */}
           <button id="submit" type="submit">
             Submit
           </button>
         </form>
       </div>
-      {/* <p>{formValues.users_name}</p>
-      <p>{formValues.book_name}</p>
-      <p>{formValues.review}</p>
-      <p>{formValues.rating}</p>
-      <p>{JSON.stringify(formValues)}</p> */}
-      {/* We need to track the changes in the inputs of our form */}
-      {/* We need to submit event to send the data */}
     </>
   );
 }
