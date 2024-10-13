@@ -1,4 +1,4 @@
 body {
-  background-image: url("./crumpled.webp");
+  background-image: url("./public/crumpled.webp");
   background-blend-mode: lighten;
 }
