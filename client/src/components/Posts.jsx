@@ -27,15 +27,11 @@ export default function Posts() {
         <p>Pick a book, click to expand, read a review and get inspired!</p>
         {reviews.map((review) => (
           <div id="review-container" key={review.id}>
-            <h2 onClick={handleClick}>
-              {review.book_name}
-              <br />
-              <br />
-              {review.author}
-            </h2>
+            <h2 onClick={handleClick}>{review.book_name}</h2>
             {info ? (
               <>
-                <h1>{review.users_name}</h1>
+                <p>Author: {review.author}</p>
+                <p>Reviewed by: {review.users_name}</p>
                 <p>
                   Review:
                   <br />
