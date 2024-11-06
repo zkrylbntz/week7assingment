@@ -35,7 +35,7 @@ app.get("/", (req, res) => {
 // I need an endpoint to READ data from db --> SQL query to get data
 app.get("/reviews", async (req, res) => {
   try {
-    const reviewsData = await db.query(`SELECT * FROM reviews`);
+    const reviewsData = await db.query(`SELECT * FROM reviews7`);
     console.log(reviewsData);
     res.status(200).json(reviewsData.rows);
   } catch (error) {
@@ -49,7 +49,7 @@ app.post("/add-review", async (req, res) => {
   try {
     const { users_name, book_name, author, review, rating } = req.body;
     const newReview = await db.query(
-      `INSERT INTO reviews (users_name, book_name, author, review, rating)
+      `INSERT INTO reviews7 (users_name, book_name, author, review, rating)
           VALUES ($1, $2, $3, $4, $5);`,
       [users_name, book_name, author, review, rating]
     );
